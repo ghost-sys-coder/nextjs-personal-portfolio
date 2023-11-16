@@ -15,7 +15,11 @@ const Navbar = () => {
             setColor(false)
         }
     }
-    window.addEventListener("scroll", changeColor);
+
+    if (typeof window !== 'undefined') {
+        window.addEventListener("scroll", changeColor);
+    }
+    
     const handleOpen = () => {
         setOpen(value => !value)
     }
@@ -40,11 +44,11 @@ const Navbar = () => {
             {open && (
                 <div className='mobile-menu'>
                     <div className='flex justify-end items-center mb-2'>
-                    <FaTimes
-                        size={40}
-                        className='text-dark-theme dark:text-light-text-1 text-right'
-                        onClick={handleOpen}
-                    />
+                        <FaTimes
+                            size={40}
+                            className='text-dark-theme dark:text-light-text-1 text-right'
+                            onClick={handleOpen}
+                        />
                     </div>
                     <Link onClick={handleOpen} href={"#about"}>about</Link>
                     <Link onClick={handleOpen} href={"#experience"}>experience</Link>
