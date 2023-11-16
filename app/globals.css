@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav-container {
+    @apply flex justify-between items-center gap-4 shadow-2xl fixed top-0 left-0 right-0 w-[100%] md:px-20 px-10 py-2 z-10;
+}
+
+.nav-container a.logo {
+    @apply text-3xl font-extrabold text-light-button cursor-pointer;
+}
+
+.nav-container nav {
+    @apply hidden sm:flex gap-4;
+}
+
+.nav-container nav a {
+    @apply uppercase text-dark-text dark:text-light-text-1 font-semibold cursor-pointer;
+}
+
+.nav-container nav a:hover {
+    @apply text-light-text-1 bg-dark-theme rounded-md p-1 dark:bg-light-text-1 dark:text-dark-theme;
+}
+
+.intro {
+    @apply flex flex-col gap-4 mt-2 sm:mt-10;
+}
+
+.input-container {
+   @apply h-[45px] w-[100%] rounded-md overflow-hidden mb-3 shadow-lg; 
+}
+
+.input-container input {
+    @apply h-[100%] w-[100%] pl-3 font-bold text-xl outline-none border-none;
+}
+
+.input-container input::placeholder {
+    @apply text-sm font-mono;
+}
+
+.mobile-menu {
+    @apply fixed left-0 right-0 bottom-0 bg-light-theme dark:bg-dark-theme min-h-screen z-20 sm:hidden flex flex-col gap-4 py-5 px-10;
+}
+
+.mobile-menu a {
+    @apply capitalize text-xl text-dark-text dark:text-light-text-1;
+}
+
+.mobile-menu a:hover {
+    @apply bg-slate-500 rounded-md py-1 text-white px-1;
+}
+
+
+
