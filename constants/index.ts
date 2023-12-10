@@ -99,6 +99,14 @@ export const projects = [
         projectUrl: 'https://personal-portfolio-version1.netlify.app/',
         tag: ['Web App', 'JavaScript']
     },
+    {
+        id: 6,
+        name: 'NextJS Blog Project',
+        imageUrl: '/projects/nextjs-blog-project.png',
+        githubUrl: 'https://github.com/ghost-sys-coder/nextjs14-pages-medium-blog',
+        projectUrl: 'https://nextjs14-pages-medium-blog.vercel.app/',
+        tag: ['NextJS']
+    }
 ]
 
 export const employment = [
