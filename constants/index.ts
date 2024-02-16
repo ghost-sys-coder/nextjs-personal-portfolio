@@ -106,6 +106,14 @@ export const projects = [
         githubUrl: 'https://github.com/ghost-sys-coder/nextjs14-pages-medium-blog',
         projectUrl: 'https://nextjs14-pages-medium-blog.vercel.app/',
         tag: ['NextJS']
+    },
+    {
+        id: 7,
+        name: 'ShopLocker Ecommerce Store with NextJS',
+        imageUrl: "/projects/NextJS-Store-shoplocker.vercel.app.png",
+        githubUrl: "https://github.com/ghost-sys-coder/my-ecommerce-shop",
+        projectUrl: "https://shoplocker.vercel.app/",
+        tag: ["NextJS", "ReactJS"]
     }
 ]
 

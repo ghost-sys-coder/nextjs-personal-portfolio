@@ -45,11 +45,11 @@ const Project = () => {
                             height={200}
                             className='w-full h-full object-cover'
                         />
-                        <div className='absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center gap-20 backdrop-blur-sm bg-white/30 bg-transparent backdrop-opacity-50'>
-                            <Link target='_blank' href={project.projectUrl}>
+                        <div className='absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center gap-20 hover:backdrop-blur-sm hover:bg-white/30 hover:bg-transparent hover:backdrop-opacity-50'>
+                            <Link className='text-red-900' target='_blank' href={project.projectUrl}>
                                 <AiFillEye size={30} />
                             </Link>
-                            <Link target='_blank' href={project.githubUrl}>
+                            <Link className='text-red-900' target='_blank' href={project.githubUrl}>
                                 <AiFillGithub size={30} />
                             </Link>
                         </div>

@@ -36,11 +36,12 @@ const Switcher = () => {
     return (
         <div className='flex justify-end items-center gap-1 mt-10'>
             <DarkModeSwitch
-                checked={darkMode}
+                checked={!darkMode}
                 onChange={toggleDarkMode}
                 size={50}
+                className={!darkMode ? 'text-gray-900' : 'text-yellow-600'}
             />
-            <p className='text-dark-button text-sm dark:text-light-button sm:inline hidden'>{darkMode === true ? 'LightMode' : 'DarkMode'}</p>
+            <p onClick={toggleDarkMode} className='text-dark-button text-sm dark:text-light-button sm:inline hidden'>{darkMode === true ? 'LightMode' : 'DarkMode'}</p>
         </div>
     )
 }
