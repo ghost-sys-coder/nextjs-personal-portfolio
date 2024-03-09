@@ -61,6 +61,14 @@ export const experiences = [
 export const projects = [
     {
         id: 1,
+        name: 'Brainwave Landing page',
+        imageUrl: '/projects/brainwave-landing-page-project.png',
+        githubUrl: 'https://github.com/ghost-sys-coder/mern-brainwave-landing-page',
+        projectUrl: 'https://brainwave-kappa.vercel.app/',
+        tag: ['ReactJS', 'Web App']
+    },
+    {
+        id: 2,
         name: 'Ecommerce Store NEXTJS',
         imageUrl: '/projects/sanity-ecommerce-store.png',
         githubUrl: 'https://github.com/ghost-sys-coder/ecommerce_next_sanity_store',
@@ -68,7 +76,7 @@ export const projects = [
         tag: ['ReactJS', 'NextJS', 'Web App']
     },
     {
-        id: 2,
+        id: 3,
         name: 'Appwrite Authentication App',
         imageUrl: '/projects/appwrite-app-1.png',
         githubUrl: 'https://github.com/ghost-sys-coder/nextjs13-meets-appwrite-authentication',
@@ -76,7 +84,7 @@ export const projects = [
         tag: ['NextJS', 'Web App']
     },
     {
-        id: 3,
+        id: 4,
         name: 'Bienvenidos Apartment',
         imageUrl: '/projects/bienvenidos.png',
         githubUrl: 'https://github.com/ghost-sys-coder/apartment-website/tree/main/Rinah_Website',
@@ -84,7 +92,7 @@ export const projects = [
         tag: ['ReactJS']
     },
     {
-        id: 4,
+        id: 5,
         name: 'Carhub Project',
         imageUrl: '/projects/car-hub-nextjs.png',
         githubUrl: 'https://github.com/ghost-sys-coder/car-hub-nextjs-website',
@@ -92,7 +100,7 @@ export const projects = [
         tag: ['NextJS']
     },
     {
-        id: 5,
+        id: 6,
         name: 'Portfolio Project',
         imageUrl: '/projects/portfolio-project.png',
         githubUrl: 'https://github.com/ghost-sys-coder/personal-portfolio-website-V1',
@@ -100,7 +108,7 @@ export const projects = [
         tag: ['Web App', 'JavaScript']
     },
     {
-        id: 6,
+        id: 7,
         name: 'NextJS Blog Project',
         imageUrl: '/projects/nextjs-blog-project.png',
         githubUrl: 'https://github.com/ghost-sys-coder/nextjs14-pages-medium-blog',
@@ -108,7 +116,7 @@ export const projects = [
         tag: ['NextJS']
     },
     {
-        id: 7,
+        id: 8,
         name: 'ShopLocker Ecommerce Store with NextJS',
         imageUrl: "/projects/NextJS-Store-shoplocker.vercel.app.png",
         githubUrl: "https://github.com/ghost-sys-coder/my-ecommerce-shop",
