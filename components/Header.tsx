@@ -6,7 +6,7 @@ import { skills } from '@/constants'
 
 const Header = () => {
     const fileDownload = () => {
-        const pdfUrl = '/resume/resume.pdf';
+        const pdfUrl = '/resume/cv.pdf';
         const link = document.createElement('a');
         link.target = '_blank';
         link.href = pdfUrl;

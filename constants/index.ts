@@ -77,10 +77,10 @@ export const projects = [
     },
     {
         id: 3,
-        name: 'Appwrite Authentication App',
-        imageUrl: '/projects/appwrite-app-1.png',
-        githubUrl: 'https://github.com/ghost-sys-coder/nextjs13-meets-appwrite-authentication',
-        projectUrl: 'https://nextjs-appwrite-authentication.vercel.app/',
+        name: 'Resume AI Analyzer With NextJS & MongoDB',
+        imageUrl: '/projects/ai-resume-analyzer-web-app.png',
+        githubUrl: 'https://github.com/ghost-sys-coder/React-with-NextJS-Enterprise-ready-applicant-tracking-system',
+        projectUrl: 'https://cvscan-seven.vercel.app/',
         tag: ['NextJS', 'Web App']
     },
     {
