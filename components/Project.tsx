@@ -29,7 +29,7 @@ const Project = () => {
                     <button
                         className={`border-none outline-none rounded-md text-sm shadow-md py-1 px-3 ${activeFilter === project ? 'bg-black text-white' : 'bg-white text-dark-text'}`}
                         type='button'
-                        onClick={()=> handleFilter(project)}
+                        onClick={() => handleFilter(project)}
                         key={project}>
                         {project}
                     </button>
