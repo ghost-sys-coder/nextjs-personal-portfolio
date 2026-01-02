@@ -94,10 +94,10 @@ export const projects = [
     {
         id: 5,
         name: 'Carhub Project',
-        imageUrl: '/projects/car-hub-nextjs.png',
-        githubUrl: 'https://github.com/ghost-sys-coder/car-hub-nextjs-website',
-        projectUrl: 'https://car-hub-nextjs-website-xy88.vercel.app/',
-        tag: ['NextJS']
+        imageUrl: '/projects/javascript-realestate-webapp.png',
+        githubUrl: 'https://github.com/ghost-sys-coder/fullstack-vanilla-javascript-realestate-web-app',
+        projectUrl: 'https://dreamhomesug.onrender.com/',
+        tag: ['JavaScript']
     },
     {
         id: 6,
