@@ -73,7 +73,8 @@ export const projects = [
         imageUrl: '/projects/realestate-admin.png',
         githubUrl: 'https://github.com/ghost-sys-coder/realestate-dreamhomes-admin-dashboard',
         projectUrl: 'https://admindreamhomes.vercel.app/',
-        tag: ['ReactJS', 'Web App']
+        tag: ['ReactJS', 'Web App'],
+        credentials: { email: "franktamalejr@gmail.com", password: "M@rgret55"}
     },
     {
         id: 3,

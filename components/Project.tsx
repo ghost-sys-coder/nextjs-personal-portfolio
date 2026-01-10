@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { AiFillGithub, AiFillEye } from 'react-icons/ai'
+import { AiFillGithub, AiFillEye, AiFillCopy } from 'react-icons/ai'
 import { projects } from '@/constants'
 
 const Project = () => {
-    // const [filterProjects, setFilterProjects] = useState(projects);
     const [data, setData] = useState(projects);
     const [activeFilter, setActiveFilter] = useState('All');
+    const [copiedField, setCopiedField] = useState<string | null>(null);
     const projectTags = ['All', 'Web App', 'Mobile App', 'ReactJS', 'NextJS', 'JavaScript'];
 
     const handleFilter = (item: string) => {
@@ -19,6 +19,12 @@ const Project = () => {
         } else {
             setData(projects.filter(project => project.tag.includes(item)))
         }
+    }
+
+    const copyToClipboard = (text: string, field: string) => {
+        navigator.clipboard.writeText(text);
+        setCopiedField(field);
+        setTimeout(() => setCopiedField(null), 2000);
     }
 
     return (
@@ -37,7 +43,7 @@ const Project = () => {
             </div>
             <div className='grid place-items-center text-center w-full gap-4 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'>
                 {data.map((project) => (
-                    <div key={project.id} className='w-full rounded-lg overflow-hidden h-[300px] relative'>
+                    <div key={project.id} className='w-full rounded-lg overflow-hidden h-[300px] relative group'>
                         <Image
                             src={project.imageUrl}
                             alt={project.name}
@@ -45,13 +51,47 @@ const Project = () => {
                             height={200}
                             className='w-full h-full object-cover'
                         />
-                        <div className='absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center gap-20 hover:backdrop-blur-sm hover:bg-white/30 hover:bg-transparent hover:backdrop-opacity-50'>
-                            <Link className='text-red-900' target='_blank' href={project.projectUrl}>
-                                <AiFillEye size={30} />
-                            </Link>
-                            <Link className='text-red-900' target='_blank' href={project.githubUrl}>
-                                <AiFillGithub size={30} />
-                            </Link>
+                        <div className='absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-white/30 transition-all duration-300'>
+                            <div className='flex items-center gap-10'>
+                                <Link className='text-red-900 hover:scale-110 transition-transform' target='_blank' href={project.projectUrl}>
+                                    <AiFillEye size={30} />
+                                </Link>
+                                <Link className='text-red-900 hover:scale-110 transition-transform' target='_blank' href={project.githubUrl}>
+                                    <AiFillGithub size={30} />
+                                </Link>
+                            </div>
+                            
+                            {project.credentials && (
+                                <div className='bg-white/90 dark:bg-gray-800/90 p-3 rounded-lg shadow-lg text-left text-xs w-[90%]'>
+                                    <p className='font-semibold mb-2 text-gray-700 dark:text-gray-200'>Login Credentials:</p>
+                                    <div className='space-y-1'>
+                                        <div className='flex items-center justify-between gap-2'>
+                                            <span className='text-gray-600 dark:text-gray-300'>
+                                                <span className='font-medium'>Email:</span> {project.credentials.email}
+                                            </span>
+                                            <button
+                                                onClick={() => copyToClipboard(project.credentials!.email, `email-${project.id}`)}
+                                                className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                                                title='Copy email'
+                                            >
+                                                {copiedField === `email-${project.id}` ? '✓' : <AiFillCopy size={14} />}
+                                            </button>
+                                        </div>
+                                        <div className='flex items-center justify-between gap-2'>
+                                            <span className='text-gray-600 dark:text-gray-300'>
+                                                <span className='font-medium'>Pass:</span> {project.credentials.password}
+                                            </span>
+                                            <button
+                                                onClick={() => copyToClipboard(project.credentials!.password, `pass-${project.id}`)}
+                                                className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                                                title='Copy password'
+                                            >
+                                                {copiedField === `pass-${project.id}` ? '✓' : <AiFillCopy size={14} />}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}
