@@ -102,7 +102,7 @@ export const projects = [
     },
     {
         id: 6,
-        name: 'Carhub Project',
+        name: 'Real Estate Project',
         imageUrl: '/projects/javascript-realestate-webapp.png',
         githubUrl: 'https://github.com/ghost-sys-coder/fullstack-vanilla-javascript-realestate-web-app',
         projectUrl: 'https://dreamhomesug.onrender.com/',

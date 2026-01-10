@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { AiFillGithub, AiFillEye, AiFillCopy } from 'react-icons/ai'
 import { projects } from '@/constants'
+import IframePreview from './IframePreview'
 
 const Project = () => {
     const [data, setData] = useState(projects);
@@ -43,29 +44,6 @@ const Project = () => {
             <div className='grid place-items-center text-center w-full gap-4 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'>
                 {data.map((project) => (
                     <div key={project.id} className='w-full rounded-lg overflow-hidden h-[250px] relative group bg-gray-200 dark:bg-gray-800'>
-                        {/* Iframe container with proper scaling */}
-                        <div className="absolute inset-0 overflow-hidden">
-                            <div
-                                className="absolute top-0 left-0"
-                                style={{
-                                    width: 1440,
-                                    height: 900,
-                                    transform: 'scale(0.333)',
-                                    transformOrigin: 'top left'
-                                }}
-                            >
-                                <iframe
-                                    src={project.projectUrl}
-                                    title={project.name}
-                                    className="w-full h-full border-0"
-                                    loading="lazy"
-                                    sandbox="allow-same-origin allow-scripts"
-                                    scrolling="no"
-                                />
-                            </div>
-                        </div>
-
-
                         {/* Overlay on hover */}
                         <div className='absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-black/70 transition-all duration-300 z-10'>
                             <h3 className='text-white font-bold px-4 text-base'>{project.name}</h3>
