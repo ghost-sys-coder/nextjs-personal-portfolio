@@ -1,6 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { AiFillGithub, AiFillEye, AiFillCopy } from 'react-icons/ai'
 import { projects } from '@/constants'
@@ -43,50 +42,79 @@ const Project = () => {
             </div>
             <div className='grid place-items-center text-center w-full gap-4 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'>
                 {data.map((project) => (
-                    <div key={project.id} className='w-full rounded-lg overflow-hidden h-[300px] relative group'>
-                        <Image
-                            src={project.imageUrl}
-                            alt={project.name}
-                            width={200}
-                            height={200}
-                            className='w-full h-full object-cover'
-                        />
-                        <div className='absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-white/30 transition-all duration-300'>
+                    <div key={project.id} className='w-full rounded-lg overflow-hidden h-[250px] relative group bg-gray-200 dark:bg-gray-800'>
+                        {/* Iframe container with proper scaling */}
+                        <div className="absolute inset-0 overflow-hidden">
+                            <div
+                                className="absolute top-0 left-0"
+                                style={{
+                                    width: 1440,
+                                    height: 900,
+                                    transform: 'scale(0.333)',
+                                    transformOrigin: 'top left'
+                                }}
+                            >
+                                <iframe
+                                    src={project.projectUrl}
+                                    title={project.name}
+                                    className="w-full h-full border-0"
+                                    loading="lazy"
+                                    sandbox="allow-same-origin allow-scripts"
+                                    scrolling="no"
+                                />
+                            </div>
+                        </div>
+
+
+                        {/* Overlay on hover */}
+                        <div className='absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-black/70 transition-all duration-300 z-10'>
+                            <h3 className='text-white font-bold px-4 text-base'>{project.name}</h3>
+
                             <div className='flex items-center gap-10'>
-                                <Link className='text-red-900 hover:scale-110 transition-transform' target='_blank' href={project.projectUrl}>
+                                <Link
+                                    className='text-white hover:text-red-400 hover:scale-110 transition-transform bg-black/50 p-3 rounded-full'
+                                    target='_blank'
+                                    href={project.projectUrl}
+                                    title="View Live Site"
+                                >
                                     <AiFillEye size={30} />
                                 </Link>
-                                <Link className='text-red-900 hover:scale-110 transition-transform' target='_blank' href={project.githubUrl}>
+                                <Link
+                                    className='text-white hover:text-red-400 hover:scale-110 transition-transform bg-black/50 p-3 rounded-full'
+                                    target='_blank'
+                                    href={project.githubUrl}
+                                    title="View GitHub Repo"
+                                >
                                     <AiFillGithub size={30} />
                                 </Link>
                             </div>
-                            
+
                             {project.credentials && (
-                                <div className='bg-white/90 dark:bg-gray-800/90 p-3 rounded-lg shadow-lg text-left text-xs w-[90%]'>
-                                    <p className='font-semibold mb-2 text-gray-700 dark:text-gray-200'>Login Credentials:</p>
-                                    <div className='space-y-1'>
-                                        <div className='flex items-center justify-between gap-2'>
-                                            <span className='text-gray-600 dark:text-gray-300'>
+                                <div className='bg-white/95 dark:bg-gray-900/95 p-3 rounded-lg shadow-xl text-left text-xs w-[90%] border border-gray-200 dark:border-gray-700'>
+                                    <p className='font-semibold mb-2 text-gray-800 dark:text-gray-100 text-sm'>🔐 Login Credentials</p>
+                                    <div className='space-y-2'>
+                                        <div className='flex items-center justify-between gap-2 bg-gray-50 dark:bg-gray-800 p-2 rounded'>
+                                            <span className='text-gray-700 dark:text-gray-200 truncate flex-1'>
                                                 <span className='font-medium'>Email:</span> {project.credentials.email}
                                             </span>
                                             <button
                                                 onClick={() => copyToClipboard(project.credentials!.email, `email-${project.id}`)}
-                                                className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                                                className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white flex-shrink-0 bg-white dark:bg-gray-700 p-1.5 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors'
                                                 title='Copy email'
                                             >
-                                                {copiedField === `email-${project.id}` ? '✓' : <AiFillCopy size={14} />}
+                                                {copiedField === `email-${project.id}` ? '✓' : <AiFillCopy size={16} />}
                                             </button>
                                         </div>
-                                        <div className='flex items-center justify-between gap-2'>
-                                            <span className='text-gray-600 dark:text-gray-300'>
+                                        <div className='flex items-center justify-between gap-2 bg-gray-50 dark:bg-gray-800 p-2 rounded'>
+                                            <span className='text-gray-700 dark:text-gray-200 truncate flex-1'>
                                                 <span className='font-medium'>Pass:</span> {project.credentials.password}
                                             </span>
                                             <button
                                                 onClick={() => copyToClipboard(project.credentials!.password, `pass-${project.id}`)}
-                                                className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                                                className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white flex-shrink-0 bg-white dark:bg-gray-700 p-1.5 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors'
                                                 title='Copy password'
                                             >
-                                                {copiedField === `pass-${project.id}` ? '✓' : <AiFillCopy size={14} />}
+                                                {copiedField === `pass-${project.id}` ? '✓' : <AiFillCopy size={16} />}
                                             </button>
                                         </div>
                                     </div>
