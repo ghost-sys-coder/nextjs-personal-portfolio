@@ -90,7 +90,7 @@ export const projects = [
         imageUrl: '/projects/ai-resume-analyzer-web-app.png',
         githubUrl: 'https://github.com/ghost-sys-coder/React-with-NextJS-Enterprise-ready-applicant-tracking-system',
         projectUrl: 'https://cvscan-seven.vercel.app/',
-        tag: ['NextJS', 'Web App']
+        tag: ['NextJS', 'Web App', 'AI-Powered']
     },
     {
         id: 5,
@@ -118,11 +118,11 @@ export const projects = [
     },
     {
         id: 8,
-        name: 'NextJS Blog Project',
+        name: 'Chat-2-My-PDF',
         imageUrl: '/projects/nextjs-blog-project.png',
-        githubUrl: 'https://github.com/ghost-sys-coder/nextjs14-pages-medium-blog',
-        projectUrl: 'https://nextjs14-pages-medium-blog.vercel.app/',
-        tag: ['NextJS']
+        githubUrl: 'https://github.com/ghost-sys-coder/chat-2-my-pdf-ai-saas-project',
+        projectUrl: 'https://chat2mypdf.vercel.app/',
+        tag: ['NextJS', 'AI-Powered']
     },
     {
         id: 9,
