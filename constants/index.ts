@@ -61,6 +61,14 @@ export const experiences = [
 export const projects = [
     {
         id: 1,
+        name: 'Veilcode Digital Solutions Agency',
+        imageUrl: '/projects/brainwave-landing-page-project.png',
+        githubUrl: 'https://github.com/ghost-sys-coder/veilcode-business-agency',
+        projectUrl: 'https://veilcodestudio.vercel.app/',
+        tag: ['NextJS', 'Web App']
+    },
+    {
+        id: 2,
         name: 'Brainwave Landing page',
         imageUrl: '/projects/brainwave-landing-page-project.png',
         githubUrl: 'https://github.com/ghost-sys-coder/mern-brainwave-landing-page',
@@ -68,7 +76,7 @@ export const projects = [
         tag: ['ReactJS', 'Web App']
     },
     {
-        id: 2,
+        id: 3,
         name: 'RealtyProp Real Estate Admin Dashboard',
         imageUrl: '/projects/realestate-admin.png',
         githubUrl: 'https://github.com/ghost-sys-coder/realestate-dreamhomes-admin-dashboard',
@@ -77,7 +85,7 @@ export const projects = [
         credentials: { email: "franktamalejr@gmail.com", password: "M@rgret55"}
     },
     {
-        id: 3,
+        id: 4,
         name: 'Ecommerce Store NEXTJS',
         imageUrl: '/projects/sanity-ecommerce-store.png',
         githubUrl: 'https://github.com/ghost-sys-coder/ecommerce_next_sanity_store',
@@ -85,7 +93,7 @@ export const projects = [
         tag: ['ReactJS', 'NextJS', 'Web App']
     },
     {
-        id: 4,
+        id: 5,
         name: 'Resume AI Analyzer With NextJS & MongoDB',
         imageUrl: '/projects/ai-resume-analyzer-web-app.png',
         githubUrl: 'https://github.com/ghost-sys-coder/React-with-NextJS-Enterprise-ready-applicant-tracking-system',
@@ -93,7 +101,7 @@ export const projects = [
         tag: ['NextJS', 'Web App', 'AI-Powered']
     },
     {
-        id: 5,
+        id: 6,
         name: 'Bienvenidos Apartment',
         imageUrl: '/projects/bienvenidos.png',
         githubUrl: 'https://github.com/ghost-sys-coder/apartment-website/tree/main/Rinah_Website',
@@ -101,7 +109,7 @@ export const projects = [
         tag: ['ReactJS']
     },
     {
-        id: 6,
+        id: 7,
         name: 'Real Estate Project',
         imageUrl: '/projects/javascript-realestate-webapp.png',
         githubUrl: 'https://github.com/ghost-sys-coder/fullstack-vanilla-javascript-realestate-web-app',
@@ -109,7 +117,7 @@ export const projects = [
         tag: ['JavaScript']
     },
     {
-        id: 7,
+        id: 8,
         name: 'Portfolio Project',
         imageUrl: '/projects/portfolio-project.png',
         githubUrl: 'https://github.com/ghost-sys-coder/personal-portfolio-website-V1',
@@ -117,7 +125,7 @@ export const projects = [
         tag: ['Web App', 'JavaScript']
     },
     {
-        id: 8,
+        id: 9,
         name: 'Chat-2-My-PDF',
         imageUrl: '/projects/nextjs-blog-project.png',
         githubUrl: 'https://github.com/ghost-sys-coder/chat-2-my-pdf-ai-saas-project',
@@ -125,7 +133,7 @@ export const projects = [
         tag: ['NextJS', 'AI-Powered']
     },
     {
-        id: 9,
+        id: 10,
         name: 'ShopLocker Ecommerce Store with NextJS',
         imageUrl: "/projects/NextJS-Store-shoplocker.vercel.app.png",
         githubUrl: "https://github.com/ghost-sys-coder/my-ecommerce-shop",
