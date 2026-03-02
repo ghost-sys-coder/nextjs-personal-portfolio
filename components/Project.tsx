@@ -9,7 +9,7 @@ const Project = () => {
     const [data, setData] = useState(projects);
     const [activeFilter, setActiveFilter] = useState('All');
     const [copiedField, setCopiedField] = useState<string | null>(null);
-    const projectTags = ['All', 'Web App', 'Mobile App', 'ReactJS', 'NextJS', 'JavaScript'];
+    const projectTags = ['All', 'Web App', 'Mobile App', 'ReactJS', 'NextJS', 'JavaScript', 'AI-Powered'];
 
     const handleFilter = (item: string) => {
         setActiveFilter(item);

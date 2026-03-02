@@ -94,6 +94,14 @@ export const projects = [
     },
     {
         id: 5,
+        name: 'Inspire Me Salon Business Website',
+        imageUrl: '/projects/salon-website-template.png',
+        githubUrl: 'https://github.com/ghost-sys-coder/salon-website-template',
+        projectUrl: 'https://salon-website-template-five.vercel.app/',
+        tag: ['ReactJS', 'NextJS', 'Web App']
+    },
+    {
+        id: 6,
         name: 'Resume AI Analyzer With NextJS & MongoDB',
         imageUrl: '/projects/ai-resume-analyzer-web-app.png',
         githubUrl: 'https://github.com/ghost-sys-coder/React-with-NextJS-Enterprise-ready-applicant-tracking-system',
@@ -101,7 +109,7 @@ export const projects = [
         tag: ['NextJS', 'Web App', 'AI-Powered']
     },
     {
-        id: 6,
+        id: 7,
         name: 'Bienvenidos Apartment',
         imageUrl: '/projects/bienvenidos.png',
         githubUrl: 'https://github.com/ghost-sys-coder/apartment-website/tree/main/Rinah_Website',
@@ -109,7 +117,7 @@ export const projects = [
         tag: ['ReactJS']
     },
     {
-        id: 7,
+        id: 8,
         name: 'Real Estate Project',
         imageUrl: '/projects/javascript-realestate-webapp.png',
         githubUrl: 'https://github.com/ghost-sys-coder/fullstack-vanilla-javascript-realestate-web-app',
@@ -117,7 +125,7 @@ export const projects = [
         tag: ['JavaScript']
     },
     {
-        id: 8,
+        id: 9,
         name: 'Portfolio Project',
         imageUrl: '/projects/portfolio-project.png',
         githubUrl: 'https://github.com/ghost-sys-coder/personal-portfolio-website-V1',
@@ -125,7 +133,7 @@ export const projects = [
         tag: ['Web App', 'JavaScript']
     },
     {
-        id: 9,
+        id: 10,
         name: 'Chat-2-My-PDF',
         imageUrl: '/projects/nextjs-blog-project.png',
         githubUrl: 'https://github.com/ghost-sys-coder/chat-2-my-pdf-ai-saas-project',
@@ -133,7 +141,7 @@ export const projects = [
         tag: ['NextJS', 'AI-Powered']
     },
     {
-        id: 10,
+        id: 11,
         name: 'ShopLocker Ecommerce Store with NextJS',
         imageUrl: "/projects/NextJS-Store-shoplocker.vercel.app.png",
         githubUrl: "https://github.com/ghost-sys-coder/my-ecommerce-shop",
